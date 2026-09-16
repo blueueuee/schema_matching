@@ -1,0 +1,290 @@
+{
+  "pair_id": "pair_1",
+  "description": "Exact name match, same values (sanity check)",
+  "profiles_a": [
+    {
+      "column_id": "DB1.Users.id",
+      "raw_name": "id",
+      "normalized_tokens": [
+        "id"
+      ],
+      "value_sample": [
+        "C101",
+        "C102",
+        "C103",
+        "C104",
+        "C105"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "id_code",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 4,
+          "max": 4,
+          "mean": 4.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": true,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "DB1.Users.name",
+      "raw_name": "name",
+      "normalized_tokens": [
+        "name"
+      ],
+      "value_sample": [
+        "Alice Smith",
+        "Bob Jones",
+        "Charlie Brown",
+        "Diana Prince",
+        "Evan Wright"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 9,
+          "max": 13,
+          "mean": 11.2
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "DB1.Users.email",
+      "raw_name": "email",
+      "normalized_tokens": [
+        "email"
+      ],
+      "value_sample": [
+        "alice@example.com",
+        "bob@example.com",
+        "charlie@corp.org",
+        "diana@mail.com",
+        "evan@test.net"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 13,
+          "max": 17,
+          "mean": 15.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": true,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "DB1.Users.balance",
+      "raw_name": "balance",
+      "normalized_tokens": [
+        "balance"
+      ],
+      "value_sample": [
+        150.5,
+        2300.0,
+        45.1,
+        890.25,
+        12.0
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "numeric",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": {
+          "mean": 679.5699999999999,
+          "std": 871.5843502495901,
+          "min": 12.0,
+          "max": 2300.0,
+          "q25": 45.1,
+          "q50": 150.5,
+          "q75": 890.25
+        },
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    }
+  ],
+  "profiles_b": [
+    {
+      "column_id": "DB2.Users.id",
+      "raw_name": "id",
+      "normalized_tokens": [
+        "id"
+      ],
+      "value_sample": [
+        "C101",
+        "C102",
+        "C103",
+        "C104",
+        "C105"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "id_code",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 4,
+          "max": 4,
+          "mean": 4.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": true,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "DB2.Users.name",
+      "raw_name": "name",
+      "normalized_tokens": [
+        "name"
+      ],
+      "value_sample": [
+        "Alice Smith",
+        "Bob Jones",
+        "Charlie Brown",
+        "Diana Prince",
+        "Evan Wright"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 9,
+          "max": 13,
+          "mean": 11.2
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "DB2.Users.email",
+      "raw_name": "email",
+      "normalized_tokens": [
+        "email"
+      ],
+      "value_sample": [
+        "alice@example.com",
+        "bob@example.com",
+        "charlie@corp.org",
+        "diana@mail.com",
+        "evan@test.net"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 13,
+          "max": 17,
+          "mean": 15.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": true,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "DB2.Users.balance",
+      "raw_name": "balance",
+      "normalized_tokens": [
+        "balance"
+      ],
+      "value_sample": [
+        150.5,
+        2300.0,
+        45.1,
+        890.25,
+        12.0
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "numeric",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": {
+          "mean": 679.5699999999999,
+          "std": 871.5843502495901,
+          "min": 12.0,
+          "max": 2300.0,
+          "q25": 45.1,
+          "q50": 150.5,
+          "q75": 890.25
+        },
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    }
+  ],
+  "ground_truth": [
+    [
+      "DB1.Users.id",
+      "DB2.Users.id"
+    ],
+    [
+      "DB1.Users.name",
+      "DB2.Users.name"
+    ],
+    [
+      "DB1.Users.email",
+      "DB2.Users.email"
+    ],
+    [
+      "DB1.Users.balance",
+      "DB2.Users.balance"
+    ]
+  ]
+}

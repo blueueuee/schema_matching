@@ -1,0 +1,280 @@
+{
+  "pair_id": "pair_4",
+  "description": "Mixed: exact matches, renamed columns, and unmatchable column",
+  "profiles_a": [
+    {
+      "column_id": "App1.Items.sku",
+      "raw_name": "sku",
+      "normalized_tokens": [
+        "sku"
+      ],
+      "value_sample": [
+        "SKU-001",
+        "SKU-002",
+        "SKU-003",
+        "SKU-004"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "id_code",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 7,
+          "max": 7,
+          "mean": 7.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": true,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "App1.Items.name",
+      "raw_name": "name",
+      "normalized_tokens": [
+        "name"
+      ],
+      "value_sample": [
+        "Widget A",
+        "Gadget B",
+        "Tool C",
+        "Device D"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 6,
+          "max": 8,
+          "mean": 7.5
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "App1.Items.price",
+      "raw_name": "price",
+      "normalized_tokens": [
+        "price"
+      ],
+      "value_sample": [
+        19.99,
+        49.5,
+        5.0,
+        120.0
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "numeric",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": {
+          "mean": 48.6225,
+          "std": 44.21046277466455,
+          "min": 5.0,
+          "max": 120.0,
+          "q25": 16.2425,
+          "q50": 34.745,
+          "q75": 67.125
+        },
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    },
+    {
+      "column_id": "App1.Items.internal_warehouse_bin",
+      "raw_name": "internal_bin",
+      "normalized_tokens": [
+        "internal",
+        "bin"
+      ],
+      "value_sample": [
+        "BIN-NORTH-01",
+        "BIN-SOUTH-02",
+        "BIN-EAST-03",
+        "BIN-WEST-04"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "id_code",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 11,
+          "max": 12,
+          "mean": 11.5
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": true,
+          "looks_like_date_string": false
+        }
+      }
+    }
+  ],
+  "profiles_b": [
+    {
+      "column_id": "App2.Catalog.product_code",
+      "raw_name": "product_code",
+      "normalized_tokens": [
+        "product",
+        "code"
+      ],
+      "value_sample": [
+        "SKU-001",
+        "SKU-002",
+        "SKU-003",
+        "SKU-004"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "id_code",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 7,
+          "max": 7,
+          "mean": 7.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": true,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "App2.Catalog.name",
+      "raw_name": "name",
+      "normalized_tokens": [
+        "name"
+      ],
+      "value_sample": [
+        "Widget A",
+        "Gadget B",
+        "Tool C",
+        "Device D"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 6,
+          "max": 8,
+          "mean": 7.5
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "App2.Catalog.cost",
+      "raw_name": "cost",
+      "normalized_tokens": [
+        "cost"
+      ],
+      "value_sample": [
+        19.99,
+        49.5,
+        5.0,
+        120.0
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "numeric",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": {
+          "mean": 48.6225,
+          "std": 44.21046277466455,
+          "min": 5.0,
+          "max": 120.0,
+          "q25": 16.2425,
+          "q50": 34.745,
+          "q75": 67.125
+        },
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    },
+    {
+      "column_id": "App2.Catalog.supplier_notes",
+      "raw_name": "notes",
+      "normalized_tokens": [
+        "notes"
+      ],
+      "value_sample": [
+        "Local vendor",
+        "Bulk supplier",
+        "Direct order",
+        "Overseas"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 8,
+          "max": 13,
+          "mean": 11.25
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    }
+  ],
+  "ground_truth": [
+    [
+      "App1.Items.sku",
+      "App2.Catalog.product_code"
+    ],
+    [
+      "App1.Items.name",
+      "App2.Catalog.name"
+    ],
+    [
+      "App1.Items.price",
+      "App2.Catalog.cost"
+    ]
+  ]
+}

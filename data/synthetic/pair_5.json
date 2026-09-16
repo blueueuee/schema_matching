@@ -1,0 +1,585 @@
+{
+  "pair_id": "pair_5",
+  "description": "Real-world flavored: Customer vs Client tables (8 columns each)",
+  "profiles_a": [
+    {
+      "column_id": "CRM.Customer.cust_id",
+      "raw_name": "cust_id",
+      "normalized_tokens": [
+        "customer",
+        "id"
+      ],
+      "value_sample": [
+        "CUST-001",
+        "CUST-002",
+        "CUST-003",
+        "CUST-004",
+        "CUST-005",
+        "CUST-006"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "id_code",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 8,
+          "max": 8,
+          "mean": 8.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": true,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "CRM.Customer.fname",
+      "raw_name": "fname",
+      "normalized_tokens": [
+        "first",
+        "name"
+      ],
+      "value_sample": [
+        "James",
+        "Mary",
+        "Robert",
+        "Patricia",
+        "John",
+        "Jennifer"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 4,
+          "max": 8,
+          "mean": 5.833333333333333
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "CRM.Customer.lname",
+      "raw_name": "lname",
+      "normalized_tokens": [
+        "last",
+        "name"
+      ],
+      "value_sample": [
+        "Smith",
+        "Johnson",
+        "Williams",
+        "Brown",
+        "Jones",
+        "Garcia"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 5,
+          "max": 8,
+          "mean": 6.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "CRM.Customer.email_addr",
+      "raw_name": "email_addr",
+      "normalized_tokens": [
+        "email",
+        "address"
+      ],
+      "value_sample": [
+        "james.s@gmail.com",
+        "mary.j@yahoo.com",
+        "rob.w@corp.com",
+        "pat.b@outlook.com",
+        "john.j@mail.com",
+        "jen.g@web.de"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 12,
+          "max": 17,
+          "mean": 15.166666666666666
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": true,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "CRM.Customer.phone_num",
+      "raw_name": "phone_num",
+      "normalized_tokens": [
+        "phone",
+        "number"
+      ],
+      "value_sample": [
+        "(555) 234-5678",
+        "(555) 345-6789",
+        "(555) 456-7890",
+        "(555) 567-8901",
+        "(555) 678-9012",
+        "(555) 789-0123"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 14,
+          "max": 14,
+          "mean": 14.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": true,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "CRM.Customer.created_at",
+      "raw_name": "created_at",
+      "normalized_tokens": [
+        "created",
+        "at"
+      ],
+      "value_sample": [
+        "2021-04-12",
+        "2021-08-19",
+        "2022-01-05",
+        "2022-06-23",
+        "2023-02-14",
+        "2023-10-09"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "date",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    },
+    {
+      "column_id": "CRM.Customer.credit_rating",
+      "raw_name": "credit_rating",
+      "normalized_tokens": [
+        "credit",
+        "rating"
+      ],
+      "value_sample": [
+        720.0,
+        685.0,
+        750.0,
+        610.0,
+        805.0,
+        690.0
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "numeric",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": {
+          "mean": 710.0,
+          "std": 60.207972893961475,
+          "min": 610.0,
+          "max": 805.0,
+          "q25": 686.25,
+          "q50": 705.0,
+          "q75": 742.5
+        },
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    },
+    {
+      "column_id": "CRM.Customer.active_flag",
+      "raw_name": "active_flag",
+      "normalized_tokens": [
+        "active",
+        "flag"
+      ],
+      "value_sample": [
+        "true",
+        "true",
+        "false",
+        "true",
+        "true",
+        "false"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 0.3333,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 4,
+          "max": 5,
+          "mean": 4.333333333333333
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    }
+  ],
+  "profiles_b": [
+    {
+      "column_id": "Billing.Client.client_code",
+      "raw_name": "client_code",
+      "normalized_tokens": [
+        "client",
+        "code"
+      ],
+      "value_sample": [
+        "CUST-001",
+        "CUST-002",
+        "CUST-003",
+        "CUST-004",
+        "CUST-005",
+        "CUST-006"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "id_code",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 8,
+          "max": 8,
+          "mean": 8.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": true,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "Billing.Client.first_name",
+      "raw_name": "first_name",
+      "normalized_tokens": [
+        "first",
+        "name"
+      ],
+      "value_sample": [
+        "James",
+        "Mary",
+        "Robert",
+        "Patricia",
+        "John",
+        "Jennifer"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 4,
+          "max": 8,
+          "mean": 5.833333333333333
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "Billing.Client.last_name",
+      "raw_name": "last_name",
+      "normalized_tokens": [
+        "last",
+        "name"
+      ],
+      "value_sample": [
+        "Smith",
+        "Johnson",
+        "Williams",
+        "Brown",
+        "Jones",
+        "Garcia"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 5,
+          "max": 8,
+          "mean": 6.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "Billing.Client.contact_email",
+      "raw_name": "contact_email",
+      "normalized_tokens": [
+        "contact",
+        "email"
+      ],
+      "value_sample": [
+        "james.s@gmail.com",
+        "mary.j@yahoo.com",
+        "rob.w@corp.com",
+        "pat.b@outlook.com",
+        "john.j@mail.com",
+        "jen.g@web.de"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 12,
+          "max": 17,
+          "mean": 15.166666666666666
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": true,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "Billing.Client.telephone",
+      "raw_name": "telephone",
+      "normalized_tokens": [
+        "telephone"
+      ],
+      "value_sample": [
+        "(555) 234-5678",
+        "(555) 345-6789",
+        "(555) 456-7890",
+        "(555) 567-8901",
+        "(555) 678-9012",
+        "(555) 789-0123"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 14,
+          "max": 14,
+          "mean": 14.0
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": true,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "Billing.Client.signup_date",
+      "raw_name": "signup_date",
+      "normalized_tokens": [
+        "signup",
+        "date"
+      ],
+      "value_sample": [
+        "2021-04-12",
+        "2021-08-19",
+        "2022-01-05",
+        "2022-06-23",
+        "2023-02-14",
+        "2023-10-09"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "date",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    },
+    {
+      "column_id": "Billing.Client.credit_score",
+      "raw_name": "credit_score",
+      "normalized_tokens": [
+        "credit",
+        "score"
+      ],
+      "value_sample": [
+        720.0,
+        685.0,
+        750.0,
+        610.0,
+        805.0,
+        690.0
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "numeric",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": {
+          "mean": 710.0,
+          "std": 60.207972893961475,
+          "min": 610.0,
+          "max": 805.0,
+          "q25": 686.25,
+          "q50": 705.0,
+          "q75": 742.5
+        },
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    },
+    {
+      "column_id": "Billing.Client.is_active",
+      "raw_name": "is_active",
+      "normalized_tokens": [
+        "is",
+        "active"
+      ],
+      "value_sample": [
+        "true",
+        "true",
+        "false",
+        "true",
+        "true",
+        "false"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 0.3333,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 4,
+          "max": 5,
+          "mean": 4.333333333333333
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    }
+  ],
+  "ground_truth": [
+    [
+      "CRM.Customer.cust_id",
+      "Billing.Client.client_code"
+    ],
+    [
+      "CRM.Customer.fname",
+      "Billing.Client.first_name"
+    ],
+    [
+      "CRM.Customer.lname",
+      "Billing.Client.last_name"
+    ],
+    [
+      "CRM.Customer.email_addr",
+      "Billing.Client.contact_email"
+    ],
+    [
+      "CRM.Customer.phone_num",
+      "Billing.Client.telephone"
+    ],
+    [
+      "CRM.Customer.created_at",
+      "Billing.Client.signup_date"
+    ],
+    [
+      "CRM.Customer.credit_rating",
+      "Billing.Client.credit_score"
+    ],
+    [
+      "CRM.Customer.active_flag",
+      "Billing.Client.is_active"
+    ]
+  ]
+}
