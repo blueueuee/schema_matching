@@ -1,0 +1,4 @@
+customer_id,customer_name,dob,phone_no,order_amount
+C001,Alice,2000-01-01,9876543210,1500
+C002,Bob,2001-02-02,9876543211,2500
+C003,Charlie,2002-03-03,9876543212,3200

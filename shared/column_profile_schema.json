@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Column Profile",
+  "type": "object",
+  "required": [
+    "column_id",
+    "raw_name",
+    "normalized_tokens",
+    "data_type",
+    "sample_values",
+    "name_embedding"
+  ],
+  "properties": {
+    "column_id": {
+      "type": "string"
+    },
+    "raw_name": {
+      "type": "string"
+    },
+    "normalized_tokens": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "data_type": {
+      "type": "string"
+    },
+    "sample_values": {
+      "type": "array"
+    },
+    "name_embedding": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "value_profile": {
+      "type": "object"
+    }
+  }
+}
