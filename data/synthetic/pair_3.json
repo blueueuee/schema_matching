@@ -1,0 +1,218 @@
+{
+  "pair_id": "pair_3",
+  "description": "Similar names, different value types (tests dtype penalty)",
+  "profiles_a": [
+    {
+      "column_id": "DB1.Profiles.age",
+      "raw_name": "age",
+      "normalized_tokens": [
+        "age"
+      ],
+      "value_sample": [
+        25.0,
+        34.0,
+        42.0,
+        19.0,
+        58.0
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "numeric",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": {
+          "mean": 35.6,
+          "std": 13.661625086350453,
+          "min": 19.0,
+          "max": 58.0,
+          "q25": 25.0,
+          "q50": 34.0,
+          "q75": 42.0
+        },
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    },
+    {
+      "column_id": "DB1.Profiles.status",
+      "raw_name": "status",
+      "normalized_tokens": [
+        "status"
+      ],
+      "value_sample": [
+        "ACTIVE",
+        "ACTIVE",
+        "PENDING",
+        "ACTIVE",
+        "INACTIVE"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "string",
+        "cardinality_ratio": 0.6,
+        "null_ratio": 0.0,
+        "length_stats": {
+          "min": 6,
+          "max": 8,
+          "mean": 6.6
+        },
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": false
+        }
+      }
+    },
+    {
+      "column_id": "DB1.Profiles.score",
+      "raw_name": "score",
+      "normalized_tokens": [
+        "score"
+      ],
+      "value_sample": [
+        88.5,
+        92.0,
+        79.0,
+        95.5,
+        84.0
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "numeric",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": {
+          "mean": 87.8,
+          "std": 5.818934610390462,
+          "min": 79.0,
+          "max": 95.5,
+          "q25": 84.0,
+          "q50": 88.5,
+          "q75": 92.0
+        },
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    }
+  ],
+  "profiles_b": [
+    {
+      "column_id": "DB2.Records.age",
+      "raw_name": "age",
+      "normalized_tokens": [
+        "age"
+      ],
+      "value_sample": [
+        "1999-01-15",
+        "1990-08-22",
+        "1982-12-05",
+        "2005-03-10",
+        "1966-07-19"
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "date",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": null,
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    },
+    {
+      "column_id": "DB2.Records.status",
+      "raw_name": "status",
+      "normalized_tokens": [
+        "status"
+      ],
+      "value_sample": [
+        100.0,
+        100.0,
+        200.0,
+        100.0,
+        300.0
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "numeric",
+        "cardinality_ratio": 0.6,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": {
+          "mean": 160.0,
+          "std": 80.0,
+          "min": 100.0,
+          "max": 300.0,
+          "q25": 100.0,
+          "q50": 100.0,
+          "q75": 200.0
+        },
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    },
+    {
+      "column_id": "DB2.Records.score",
+      "raw_name": "score",
+      "normalized_tokens": [
+        "score"
+      ],
+      "value_sample": [
+        88.5,
+        92.0,
+        79.0,
+        95.5,
+        84.0
+      ],
+      "name_embedding": [],
+      "value_profile": {
+        "dtype": "numeric",
+        "cardinality_ratio": 1.0,
+        "null_ratio": 0.0,
+        "length_stats": null,
+        "numeric_stats": {
+          "mean": 87.8,
+          "std": 5.818934610390462,
+          "min": 79.0,
+          "max": 95.5,
+          "q25": 84.0,
+          "q50": 88.5,
+          "q75": 92.0
+        },
+        "pattern_flags": {
+          "looks_like_email": false,
+          "looks_like_phone": false,
+          "looks_like_id_code": false,
+          "looks_like_date_string": true
+        }
+      }
+    }
+  ],
+  "ground_truth": [
+    [
+      "DB1.Profiles.score",
+      "DB2.Records.score"
+    ]
+  ]
+}
