@@ -36,7 +36,41 @@
       }
     },
     "value_profile": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "dtype": { "type": "string" },
+        "cardinality_ratio": { "type": "number" },
+        "null_ratio": { "type": "number" },
+        "length_stats": {
+          "type": ["object", "null"],
+          "properties": {
+            "min": { "type": "number" },
+            "max": { "type": "number" },
+            "mean": { "type": "number" }
+          }
+        },
+        "numeric_stats": {
+          "type": ["object", "null"],
+          "properties": {
+            "mean": { "type": "number" },
+            "std": { "type": "number" },
+            "min": { "type": "number" },
+            "max": { "type": "number" },
+            "q25": { "type": "number" },
+            "q50": { "type": "number" },
+            "q75": { "type": "number" }
+          }
+        },
+        "pattern_flags": {
+          "type": "object",
+          "properties": {
+            "looks_like_email": { "type": "boolean" },
+            "looks_like_phone": { "type": "boolean" },
+            "looks_like_id_code": { "type": "boolean" },
+            "looks_like_date_string": { "type": "boolean" }
+          }
+        }
+      }
     }
   }
 }
