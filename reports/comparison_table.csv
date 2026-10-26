@@ -1,0 +1,5 @@
+method,schema_pair_1_f1,schema_pair_2_f1,schema_pair_3_f1,schema_pair_4_f1,schema_pair_5_f1,macro_precision,macro_recall,macro_f1
+Name-Only,1.0,0.9091,0.6,0.75,0.8333,0.84,0.8295,0.8185
+Value-Only,1.0,1.0,1.0,1.0,0.875,0.9556,1.0,0.975
+Fixed-Fusion (0.5),1.0,1.0,1.0,0.75,0.875,0.8756,1.0,0.925
+Adaptive Fusion,1.0,1.0,1.0,1.0,0.875,0.9556,1.0,0.975

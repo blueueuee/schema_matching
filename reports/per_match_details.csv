@@ -1,0 +1,125 @@
+pair_id,method,source_column,target_column,confidence_score,accepted,name_similarity,value_similarity,alpha,is_in_ground_truth,is_correct_accepted_match,explanation
+schema_pair_1,Name-Only,cust_id,customer_id,1.0,True,1.0,1.0,1.0,True,True,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_1,Name-Only,emp_fname,employee_first_name,1.0,True,1.0,1.0,1.0,True,True,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_1,Name-Only,order_qty,order_quantity,1.0,True,1.0,1.0,1.0,True,True,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_1,Name-Only,total_amt,total_amount,1.0,True,1.0,1.0,1.0,True,True,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_1,Name-Only,dob,date_of_birth,0.95,True,0.95,1.0,1.0,True,True,Score 0.950 = 1.00 * 0.950 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_1,Name-Only,phone_num,telephone_number,0.9485,True,0.9485,1.0,1.0,True,True,Score 0.948 = 1.00 * 0.948 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_1,Value-Only,cust_id,customer_id,1.0,True,1.0,1.0,0.0,True,True,Score 1.000 = 0.00 * 1.000 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_1,Value-Only,emp_fname,employee_first_name,1.0,True,1.0,1.0,0.0,True,True,Score 1.000 = 0.00 * 1.000 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_1,Value-Only,dob,date_of_birth,1.0,True,0.95,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.950 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_1,Value-Only,phone_num,telephone_number,1.0,True,0.9485,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.948 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_1,Value-Only,order_qty,order_quantity,1.0,True,1.0,1.0,0.0,True,True,Score 1.000 = 0.00 * 1.000 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_1,Value-Only,total_amt,total_amount,1.0,True,1.0,1.0,0.0,True,True,Score 1.000 = 0.00 * 1.000 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_1,Fixed-Fusion (0.5),cust_id,customer_id,1.0,True,1.0,1.0,0.5,True,True,Score 1.000 = 0.50 * 1.000 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_1,Fixed-Fusion (0.5),emp_fname,employee_first_name,1.0,True,1.0,1.0,0.5,True,True,Score 1.000 = 0.50 * 1.000 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_1,Fixed-Fusion (0.5),order_qty,order_quantity,1.0,True,1.0,1.0,0.5,True,True,Score 1.000 = 0.50 * 1.000 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_1,Fixed-Fusion (0.5),total_amt,total_amount,1.0,True,1.0,1.0,0.5,True,True,Score 1.000 = 0.50 * 1.000 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_1,Fixed-Fusion (0.5),dob,date_of_birth,0.975,True,0.95,1.0,0.5,True,True,Score 0.975 = 0.50 * 0.950 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_1,Fixed-Fusion (0.5),phone_num,telephone_number,0.9742,True,0.9485,1.0,0.5,True,True,Score 0.974 = 0.50 * 0.948 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_1,Adaptive Fusion,cust_id,customer_id,1.0,True,1.0,1.0,0.7,True,True,Score 1.000 = 0.70 * 1.000 (name) + 0.30 * 1.000 (value). Adjustments: high semantic name match and matching id_code data type.
+schema_pair_1,Adaptive Fusion,emp_fname,employee_first_name,1.0,True,1.0,1.0,0.7,True,True,Score 1.000 = 0.70 * 1.000 (name) + 0.30 * 1.000 (value). Adjustments: high semantic name match and matching string data type.
+schema_pair_1,Adaptive Fusion,order_qty,order_quantity,1.0,True,1.0,1.0,0.7,True,True,Score 1.000 = 0.70 * 1.000 (name) + 0.30 * 1.000 (value). Adjustments: high semantic name match and matching numeric data type.
+schema_pair_1,Adaptive Fusion,total_amt,total_amount,1.0,True,1.0,1.0,0.7,True,True,Score 1.000 = 0.70 * 1.000 (name) + 0.30 * 1.000 (value). Adjustments: high semantic name match and matching numeric data type.
+schema_pair_1,Adaptive Fusion,dob,date_of_birth,0.965,True,0.95,1.0,0.7,True,True,Score 0.965 = 0.70 * 0.950 (name) + 0.30 * 1.000 (value). Adjustments: high semantic name match and matching date data type.
+schema_pair_1,Adaptive Fusion,phone_num,telephone_number,0.9639,True,0.9485,1.0,0.7,True,True,Score 0.964 = 0.70 * 0.948 (name) + 0.30 * 1.000 (value). Adjustments: high semantic name match and matching string data type.
+schema_pair_2,Name-Only,credit_rating,credit_score,0.8375,True,0.8375,1.0,1.0,True,True,Score 0.837 = 1.00 * 0.837 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_2,Name-Only,signup_date,registration_date,0.6829,True,0.6829,1.0,1.0,True,True,Score 0.683 = 1.00 * 0.683 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_2,Name-Only,account_balance,outstanding_balance,0.6573,True,0.6573,1.0,1.0,True,True,Score 0.657 = 1.00 * 0.657 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_2,Name-Only,contact_mail,user_email,0.6116,True,0.6116,1.0,1.0,True,True,Score 0.612 = 1.00 * 0.612 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_2,Name-Only,billing_address,residential_address,0.5316,True,0.5316,1.0,1.0,True,True,Score 0.532 = 1.00 * 0.532 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_2,Name-Only,client_code,customer_identifier,0.315,False,0.315,1.0,1.0,True,False,Score 0.315 = 1.00 * 0.315 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_2,Value-Only,client_code,customer_identifier,1.0,True,0.315,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.315 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_2,Value-Only,contact_mail,user_email,1.0,True,0.6116,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.612 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_2,Value-Only,signup_date,registration_date,1.0,True,0.6829,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.683 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_2,Value-Only,credit_rating,credit_score,1.0,True,0.8375,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.837 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_2,Value-Only,billing_address,residential_address,1.0,True,0.5316,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.532 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_2,Value-Only,account_balance,outstanding_balance,1.0,True,0.6573,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.657 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_2,Fixed-Fusion (0.5),credit_rating,credit_score,0.9187,True,0.8375,1.0,0.5,True,True,Score 0.919 = 0.50 * 0.837 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_2,Fixed-Fusion (0.5),signup_date,registration_date,0.8415,True,0.6829,1.0,0.5,True,True,Score 0.841 = 0.50 * 0.683 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_2,Fixed-Fusion (0.5),account_balance,outstanding_balance,0.8286,True,0.6573,1.0,0.5,True,True,Score 0.829 = 0.50 * 0.657 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_2,Fixed-Fusion (0.5),contact_mail,user_email,0.8058,True,0.6116,1.0,0.5,True,True,Score 0.806 = 0.50 * 0.612 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_2,Fixed-Fusion (0.5),billing_address,residential_address,0.7658,True,0.5316,1.0,0.5,True,True,Score 0.766 = 0.50 * 0.532 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_2,Fixed-Fusion (0.5),client_code,customer_identifier,0.6575,True,0.315,1.0,0.5,True,True,Score 0.658 = 0.50 * 0.315 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_2,Adaptive Fusion,credit_rating,credit_score,0.8862,True,0.8375,1.0,0.7,True,True,Score 0.886 = 0.70 * 0.837 (name) + 0.30 * 1.000 (value). Adjustments: high semantic name match and matching numeric data type.
+schema_pair_2,Adaptive Fusion,signup_date,registration_date,0.8098,True,0.6829,1.0,0.6,True,True,Score 0.810 = 0.60 * 0.683 (name) + 0.40 * 1.000 (value).
+schema_pair_2,Adaptive Fusion,account_balance,outstanding_balance,0.7944,True,0.6573,1.0,0.6,True,True,Score 0.794 = 0.60 * 0.657 (name) + 0.40 * 1.000 (value).
+schema_pair_2,Adaptive Fusion,contact_mail,user_email,0.767,True,0.6116,1.0,0.6,True,True,Score 0.767 = 0.60 * 0.612 (name) + 0.40 * 1.000 (value).
+schema_pair_2,Adaptive Fusion,billing_address,residential_address,0.719,True,0.5316,1.0,0.6,True,True,Score 0.719 = 0.60 * 0.532 (name) + 0.40 * 1.000 (value). Adjustments: signals disagree (0.53 name vs 1.00 value).
+schema_pair_2,Adaptive Fusion,client_code,customer_identifier,0.589,True,0.315,1.0,0.6,True,True,Score 0.589 = 0.60 * 0.315 (name) + 0.40 * 1.000 (value). Adjustments: signals disagree (0.32 name vs 1.00 value).
+schema_pair_3,Name-Only,id,id,1.0,True,1.0,0.2829,1.0,False,False,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 0.283 (value). Adjustments: Static method=name_only.
+schema_pair_3,Name-Only,date,date,1.0,True,1.0,1.0,1.0,True,True,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_3,Name-Only,val,value,1.0,True,1.0,1.0,1.0,True,True,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_3,Name-Only,code,code,1.0,True,1.0,0.2829,1.0,False,False,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 0.283 (value). Adjustments: Static method=name_only.
+schema_pair_3,Name-Only,name,label,0.4189,True,0.4189,1.0,1.0,True,True,Score 0.419 = 1.00 * 0.419 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_3,Value-Only,id,code,1.0,True,0.4512,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.451 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_3,Value-Only,name,label,1.0,True,0.4189,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.419 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_3,Value-Only,date,date,1.0,True,1.0,1.0,0.0,True,True,Score 1.000 = 0.00 * 1.000 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_3,Value-Only,val,value,1.0,True,1.0,1.0,0.0,True,True,Score 1.000 = 0.00 * 1.000 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_3,Value-Only,code,id,1.0,True,0.4512,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.451 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_3,Fixed-Fusion (0.5),date,date,1.0,True,1.0,1.0,0.5,True,True,Score 1.000 = 0.50 * 1.000 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_3,Fixed-Fusion (0.5),val,value,1.0,True,1.0,1.0,0.5,True,True,Score 1.000 = 0.50 * 1.000 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_3,Fixed-Fusion (0.5),id,code,0.7256,True,0.4512,1.0,0.5,True,True,Score 0.726 = 0.50 * 0.451 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_3,Fixed-Fusion (0.5),code,id,0.7256,True,0.4512,1.0,0.5,True,True,Score 0.726 = 0.50 * 0.451 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_3,Fixed-Fusion (0.5),name,label,0.7094,True,0.4189,1.0,0.5,True,True,Score 0.709 = 0.50 * 0.419 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_3,Adaptive Fusion,date,date,1.0,True,1.0,1.0,0.4,True,True,Score 1.000 = 0.40 * 1.000 (name) + 0.60 * 1.000 (value). Adjustments: both column names are generic; relying primarily on value profile; high semantic name match and matching date data type.
+schema_pair_3,Adaptive Fusion,val,value,1.0,True,1.0,1.0,0.4,True,True,Score 1.000 = 0.40 * 1.000 (name) + 0.60 * 1.000 (value). Adjustments: both column names are generic; relying primarily on value profile; high semantic name match and matching numeric data type.
+schema_pair_3,Adaptive Fusion,id,code,0.8902,True,0.4512,1.0,0.2,True,True,Score 0.890 = 0.20 * 0.451 (name) + 0.80 * 1.000 (value). Adjustments: both column names are generic; relying primarily on value profile; signals disagree; shifted toward value profile due to generic names.
+schema_pair_3,Adaptive Fusion,code,id,0.8902,True,0.4512,1.0,0.2,True,True,Score 0.890 = 0.20 * 0.451 (name) + 0.80 * 1.000 (value). Adjustments: both column names are generic; relying primarily on value profile; signals disagree; shifted toward value profile due to generic names.
+schema_pair_3,Adaptive Fusion,name,label,0.7966,True,0.4189,1.0,0.35,True,True,Score 0.797 = 0.35 * 0.419 (name) + 0.65 * 1.000 (value). Adjustments: uninformative/generic column name detected; reduced name weight; signals disagree; shifted toward value profile due to generic names.
+schema_pair_4,Name-Only,status,status,1.0,True,1.0,0.282,1.0,False,False,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 0.282 (value). Adjustments: Static method=name_only.
+schema_pair_4,Name-Only,score,score,1.0,True,1.0,1.0,1.0,True,True,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_4,Name-Only,age,age,1.0,True,1.0,0.3042,1.0,False,False,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 0.304 (value). Adjustments: Static method=name_only.
+schema_pair_4,Name-Only,zip,postal_code,1.0,True,1.0,1.0,1.0,True,True,Score 1.000 = 1.00 * 1.000 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_4,Name-Only,notes,commentary,0.3938,True,0.3938,1.0,1.0,True,True,Score 0.394 = 1.00 * 0.394 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_4,Value-Only,score,score,1.0,True,1.0,1.0,0.0,True,True,Score 1.000 = 0.00 * 1.000 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_4,Value-Only,zip,postal_code,1.0,True,1.0,1.0,0.0,True,True,Score 1.000 = 0.00 * 1.000 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_4,Value-Only,notes,commentary,1.0,True,0.3938,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.394 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_4,Value-Only,age,status,0.3373,False,0.3149,0.3373,0.0,False,False,Score 0.337 = 0.00 * 0.315 (name) + 1.00 * 0.337 (value). Adjustments: Static method=value_only.
+schema_pair_4,Value-Only,status,age,0.2763,False,0.3149,0.2763,0.0,False,False,Score 0.276 = 0.00 * 0.315 (name) + 1.00 * 0.276 (value). Adjustments: Static method=value_only.
+schema_pair_4,Fixed-Fusion (0.5),score,score,1.0,True,1.0,1.0,0.5,True,True,Score 1.000 = 0.50 * 1.000 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_4,Fixed-Fusion (0.5),zip,postal_code,1.0,True,1.0,1.0,0.5,True,True,Score 1.000 = 0.50 * 1.000 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_4,Fixed-Fusion (0.5),notes,commentary,0.6969,True,0.3938,1.0,0.5,True,True,Score 0.697 = 0.50 * 0.394 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_4,Fixed-Fusion (0.5),age,age,0.6521,True,1.0,0.3042,0.5,False,False,Score 0.652 = 0.50 * 1.000 (name) + 0.50 * 0.304 (value). Adjustments: Static method=fixed.
+schema_pair_4,Fixed-Fusion (0.5),status,status,0.641,True,1.0,0.282,0.5,False,False,Score 0.641 = 0.50 * 1.000 (name) + 0.50 * 0.282 (value). Adjustments: Static method=fixed.
+schema_pair_4,Adaptive Fusion,score,score,1.0,True,1.0,1.0,0.7,True,True,Score 1.000 = 0.70 * 1.000 (name) + 0.30 * 1.000 (value). Adjustments: high semantic name match and matching numeric data type.
+schema_pair_4,Adaptive Fusion,zip,postal_code,1.0,True,1.0,1.0,0.7,True,True,Score 1.000 = 0.70 * 1.000 (name) + 0.30 * 1.000 (value). Adjustments: high semantic name match and matching numeric data type.
+schema_pair_4,Adaptive Fusion,notes,commentary,0.6363,True,0.3938,1.0,0.6,True,True,Score 0.636 = 0.60 * 0.394 (name) + 0.40 * 1.000 (value). Adjustments: signals disagree (0.39 name vs 1.00 value).
+schema_pair_4,Adaptive Fusion,age,status,0.3306,False,0.3149,0.3373,0.3,False,False,Score 0.331 = 0.30 * 0.315 (name) + 0.70 * 0.337 (value). Adjustments: both column names are generic; relying primarily on value profile.
+schema_pair_4,Adaptive Fusion,status,age,0.0825,False,0.3149,0.2763,0.15,False,False,Score 0.083 = 0.15 * 0.315 (name) + 0.85 * 0.276 (value). Adjustments: both column names are generic; relying primarily on value profile; data type mismatch (string vs date); penalized value similarity; generic name with incompatible data types; suppressed false-friend name weight.
+schema_pair_5,Name-Only,dept_name,department,0.8956,True,0.8956,1.0,1.0,True,True,Score 0.896 = 1.00 * 0.896 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_5,Name-Only,work_email,corporate_email,0.6845,True,0.6845,1.0,1.0,True,True,Score 0.685 = 1.00 * 0.685 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_5,Name-Only,emp_id,employee_code,0.6814,True,0.6814,1.0,1.0,True,True,Score 0.681 = 1.00 * 0.681 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_5,Name-Only,hire_date,start_date,0.6086,True,0.6086,1.0,1.0,True,True,Score 0.609 = 1.00 * 0.609 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_5,Name-Only,salary,compensation,0.598,True,0.598,1.0,1.0,True,True,Score 0.598 = 1.00 * 0.598 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_5,Name-Only,full_name,staff_name,0.3481,False,0.3481,1.0,1.0,True,False,Score 0.348 = 1.00 * 0.348 (name) + 0.00 * 1.000 (value). Adjustments: Static method=name_only.
+schema_pair_5,Name-Only,fax_number,office_phone,0.3232,False,0.3232,0.4058,1.0,False,False,Score 0.323 = 1.00 * 0.323 (name) + 0.00 * 0.406 (value). Adjustments: Static method=name_only.
+schema_pair_5,Name-Only,tax_id,audit_timestamp,0.1833,False,0.1833,0.2859,1.0,False,False,Score 0.183 = 1.00 * 0.183 (name) + 0.00 * 0.286 (value). Adjustments: Static method=name_only.
+schema_pair_5,Name-Only,temp_notes,emergency_contact,0.173,False,0.173,0.9203,1.0,False,False,Score 0.173 = 1.00 * 0.173 (name) + 0.00 * 0.920 (value). Adjustments: Static method=name_only.
+schema_pair_5,Value-Only,emp_id,employee_code,1.0,True,0.6814,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.681 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_5,Value-Only,full_name,staff_name,1.0,True,0.3481,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.348 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_5,Value-Only,work_email,corporate_email,1.0,True,0.6845,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.685 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_5,Value-Only,dept_name,department,1.0,True,0.8956,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.896 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_5,Value-Only,hire_date,start_date,1.0,True,0.6086,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.609 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_5,Value-Only,salary,compensation,1.0,True,0.598,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.598 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_5,Value-Only,tax_id,ssn,1.0,True,0.1616,1.0,0.0,True,True,Score 1.000 = 0.00 * 0.162 (name) + 1.00 * 1.000 (value). Adjustments: Static method=value_only.
+schema_pair_5,Value-Only,temp_notes,emergency_contact,0.9203,True,0.173,0.9203,0.0,False,False,Score 0.920 = 0.00 * 0.173 (name) + 1.00 * 0.920 (value). Adjustments: Static method=value_only.
+schema_pair_5,Value-Only,fax_number,office_phone,0.4058,True,0.3232,0.4058,0.0,False,False,Score 0.406 = 0.00 * 0.323 (name) + 1.00 * 0.406 (value). Adjustments: Static method=value_only.
+schema_pair_5,Fixed-Fusion (0.5),dept_name,department,0.9478,True,0.8956,1.0,0.5,True,True,Score 0.948 = 0.50 * 0.896 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_5,Fixed-Fusion (0.5),work_email,corporate_email,0.8423,True,0.6845,1.0,0.5,True,True,Score 0.842 = 0.50 * 0.685 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_5,Fixed-Fusion (0.5),emp_id,employee_code,0.8407,True,0.6814,1.0,0.5,True,True,Score 0.841 = 0.50 * 0.681 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_5,Fixed-Fusion (0.5),hire_date,start_date,0.8043,True,0.6086,1.0,0.5,True,True,Score 0.804 = 0.50 * 0.609 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_5,Fixed-Fusion (0.5),salary,compensation,0.799,True,0.598,1.0,0.5,True,True,Score 0.799 = 0.50 * 0.598 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_5,Fixed-Fusion (0.5),full_name,staff_name,0.674,True,0.3481,1.0,0.5,True,True,Score 0.674 = 0.50 * 0.348 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_5,Fixed-Fusion (0.5),tax_id,ssn,0.5808,True,0.1616,1.0,0.5,True,True,Score 0.581 = 0.50 * 0.162 (name) + 0.50 * 1.000 (value). Adjustments: Static method=fixed.
+schema_pair_5,Fixed-Fusion (0.5),temp_notes,emergency_contact,0.5466,True,0.173,0.9203,0.5,False,False,Score 0.547 = 0.50 * 0.173 (name) + 0.50 * 0.920 (value). Adjustments: Static method=fixed.
+schema_pair_5,Fixed-Fusion (0.5),fax_number,office_phone,0.3645,True,0.3232,0.4058,0.5,False,False,Score 0.365 = 0.50 * 0.323 (name) + 0.50 * 0.406 (value). Adjustments: Static method=fixed.
+schema_pair_5,Adaptive Fusion,dept_name,department,0.9269,True,0.8956,1.0,0.7,True,True,Score 0.927 = 0.70 * 0.896 (name) + 0.30 * 1.000 (value). Adjustments: high semantic name match and matching string data type.
+schema_pair_5,Adaptive Fusion,work_email,corporate_email,0.8107,True,0.6845,1.0,0.6,True,True,Score 0.811 = 0.60 * 0.685 (name) + 0.40 * 1.000 (value).
+schema_pair_5,Adaptive Fusion,emp_id,employee_code,0.8088,True,0.6814,1.0,0.6,True,True,Score 0.809 = 0.60 * 0.681 (name) + 0.40 * 1.000 (value).
+schema_pair_5,Adaptive Fusion,hire_date,start_date,0.7652,True,0.6086,1.0,0.6,True,True,Score 0.765 = 0.60 * 0.609 (name) + 0.40 * 1.000 (value).
+schema_pair_5,Adaptive Fusion,salary,compensation,0.7588,True,0.598,1.0,0.6,True,True,Score 0.759 = 0.60 * 0.598 (name) + 0.40 * 1.000 (value).
+schema_pair_5,Adaptive Fusion,tax_id,ssn,0.7066,True,0.1616,1.0,0.35,True,True,Score 0.707 = 0.35 * 0.162 (name) + 0.65 * 1.000 (value). Adjustments: uninformative/generic column name detected; reduced name weight; signals disagree; shifted toward value profile due to generic names.
+schema_pair_5,Adaptive Fusion,full_name,staff_name,0.6088,True,0.3481,1.0,0.6,True,True,Score 0.609 = 0.60 * 0.348 (name) + 0.40 * 1.000 (value). Adjustments: signals disagree (0.35 name vs 1.00 value).
+schema_pair_5,Adaptive Fusion,temp_notes,emergency_contact,0.4719,True,0.173,0.9203,0.6,False,False,Score 0.472 = 0.60 * 0.173 (name) + 0.40 * 0.920 (value). Adjustments: signals disagree (0.17 name vs 0.92 value).
+schema_pair_5,Adaptive Fusion,fax_number,office_phone,0.3563,True,0.3232,0.4058,0.6,False,False,Score 0.356 = 0.60 * 0.323 (name) + 0.40 * 0.406 (value).

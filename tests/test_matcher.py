@@ -22,7 +22,7 @@ def test_build_similarity_matrix():
         profiles_b,
         name_sim_fn=compute_name_similarity,
         value_sim_fn=value_similarity,
-        alpha=0.5
+        alpha=0.5,
     )
 
     assert isinstance(matrix, np.ndarray)
@@ -41,18 +41,15 @@ def test_match_schemas_synthetic_pair_1():
         name_sim_fn=compute_name_similarity,
         value_sim_fn=value_similarity,
         alpha=0.5,
-        threshold=0.3
+        threshold=0.3,
     )
 
-    # In synthetic pair 1 (exact match), all 4 columns should match with score > 0.8
-    assert len(matches) == 4
+    gt_set = set(pair_1["ground_truth"])
+    assert len(matches) == len(gt_set)
     for m in matches:
         assert m["accepted"] is True
         assert m["score"] > 0.8
-        # Source ID and target ID should have matching suffix
-        col_a_suffix = m["column_a"].split(".")[-1]
-        col_b_suffix = m["column_b"].split(".")[-1]
-        assert col_a_suffix == col_b_suffix
+        assert (m["column_a"], m["column_b"]) in gt_set
 
 
 def test_match_schemas_empty_input():

@@ -1,0 +1,21 @@
+pair_id,method,precision,recall,f1,tp,fp,fn,threshold
+schema_pair_1,Name-Only,1.0,1.0,1.0,6,0,0,0.35
+schema_pair_1,Value-Only,1.0,1.0,1.0,6,0,0,0.35
+schema_pair_1,Fixed-Fusion (0.5),1.0,1.0,1.0,6,0,0,0.35
+schema_pair_1,Adaptive Fusion,1.0,1.0,1.0,6,0,0,0.35
+schema_pair_2,Name-Only,1.0,0.8333,0.9091,5,0,1,0.35
+schema_pair_2,Value-Only,1.0,1.0,1.0,6,0,0,0.35
+schema_pair_2,Fixed-Fusion (0.5),1.0,1.0,1.0,6,0,0,0.35
+schema_pair_2,Adaptive Fusion,1.0,1.0,1.0,6,0,0,0.35
+schema_pair_3,Name-Only,0.6,0.6,0.6,3,2,2,0.35
+schema_pair_3,Value-Only,1.0,1.0,1.0,5,0,0,0.35
+schema_pair_3,Fixed-Fusion (0.5),1.0,1.0,1.0,5,0,0,0.35
+schema_pair_3,Adaptive Fusion,1.0,1.0,1.0,5,0,0,0.35
+schema_pair_4,Name-Only,0.6,1.0,0.75,3,2,0,0.35
+schema_pair_4,Value-Only,1.0,1.0,1.0,3,0,0,0.35
+schema_pair_4,Fixed-Fusion (0.5),0.6,1.0,0.75,3,2,0,0.35
+schema_pair_4,Adaptive Fusion,1.0,1.0,1.0,3,0,0,0.35
+schema_pair_5,Name-Only,1.0,0.7143,0.8333,5,0,2,0.35
+schema_pair_5,Value-Only,0.7778,1.0,0.875,7,2,0,0.35
+schema_pair_5,Fixed-Fusion (0.5),0.7778,1.0,0.875,7,2,0,0.35
+schema_pair_5,Adaptive Fusion,0.7778,1.0,0.875,7,2,0,0.35
