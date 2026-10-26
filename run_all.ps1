@@ -30,4 +30,7 @@ Write-Host "[4/5] Executing benchmark evaluation across schema pairs..."
 
 # 5. Launch App
 Write-Host "[5/5] Starting Streamlit web application..."
+# Set PYTHONPATH so Streamlit's script runner finds all project packages
+$env:PYTHONPATH = (Resolve-Path ".").Path
 & $STREAMLIT run app/streamlit_app.py
+

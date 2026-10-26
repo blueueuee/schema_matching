@@ -4,7 +4,15 @@ Provides interactive evaluation, side-by-side feature inspection,
 explainability breakdowns, and similarity heatmaps.
 """
 
+import sys
 from pathlib import Path
+
+# Ensure the repository root is on sys.path so package imports work
+# regardless of the directory Streamlit is invoked from.
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
 from typing import Any, Dict, List, Optional, Tuple
 import pandas as pd
 import numpy as np
@@ -12,7 +20,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-from app.service import match_tables, MatchResult
+from service import match_tables, MatchResult  # 'service' lives in app/, which Streamlit puts on sys.path[0]
 from person_a.name_embedder import get_name_embedder
 from evaluation.metrics import compute_metrics
 
