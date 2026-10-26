@@ -18,17 +18,12 @@ lib/
 lib64/
 parts/
 sdist/
-var/
 wheels/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
-
-# PyInstaller
-*.manifest
-*.spec
 
 # Unit test / coverage
 htmlcov/
@@ -48,10 +43,15 @@ cover/
 # Virtual Environments
 venv/
 .venv/
+.venv*/
 env/
 ENV/
 env.bak/
 venv.bak/
+
+# HuggingFace & Torch model caches
+.cache/
+huggingface/
 
 # IDE & OS files
 .idea/
@@ -61,3 +61,9 @@ venv.bak/
 *~
 .DS_Store
 Thumbs.db
+
+# Explicit negations for tracked project assets
+!shared/*.json
+!data/synthetic/*.json
+!data/test_schemas/**/*.csv
+!reports/*.csv
