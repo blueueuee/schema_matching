@@ -1,0 +1,7 @@
+source_column,target_column
+client_code,customer_identifier
+contact_mail,user_email
+signup_date,registration_date
+credit_rating,credit_score
+billing_address,residential_address
+account_balance,outstanding_balance

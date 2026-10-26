@@ -1,0 +1,8 @@
+source_column,target_column
+emp_id,employee_code
+full_name,staff_name
+work_email,corporate_email
+dept_name,department
+hire_date,start_date
+salary,compensation
+tax_id,ssn

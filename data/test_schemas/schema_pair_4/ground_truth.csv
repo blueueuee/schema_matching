@@ -1,0 +1,4 @@
+source_column,target_column
+score,score
+zip,postal_code
+notes,commentary

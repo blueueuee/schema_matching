@@ -1,0 +1,6 @@
+source_column,target_column
+id,code
+name,label
+date,date
+val,value
+code,id
