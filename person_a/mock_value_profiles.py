@@ -1,151 +1,35 @@
-import numpy as np
+"""Profile generator using real sample data and the actual value profiler.
+
+Builds realistic value profiles for tests without hardcoded vector indices.
+"""
+
+from typing import Any, Dict, List
+from shared.contracts import ColumnProfile
+from value_pipeline.profiler import build_value_profile
+
+SAMPLE_DATASETS: Dict[str, List[Any]] = {
+    "id": ["CUST-001", "CUST-002", "CUST-003", "CUST-004", "CUST-005"],
+    "date": ["2023-01-15", "2023-03-22", "2023-06-01", "2023-09-18", "2023-11-30"],
+    "amount": [49.99, 129.50, 9.99, 899.00, 24.50],
+    "phone": ["+1-555-0192", "+1-555-0193", "+1-555-0194", "+1-555-0195", "+1-555-0196"],
+    "email": ["user1@example.com", "user2@corp.org", "user3@mail.net", "user4@test.com", "user5@domain.io"],
+    "categorical": ["ACTIVE", "ACTIVE", "PENDING", "ACTIVE", "INACTIVE"],
+    "string": ["Quick brown fox", "Lorem ipsum dolor", "Database integration", "Semantic matching", "System admin"],
+}
 
 
-def create_mock_value_profile(
-    column_name
-):
+def create_sample_profile(column_name: str, sample_category: str = "id") -> Dict[str, Any]:
+    """Build a valid ColumnProfile dictionary using real sample data and the actual value profiler."""
+    samples = SAMPLE_DATASETS.get(sample_category, SAMPLE_DATASETS["string"])
+    val_profile = build_value_profile(samples, total_count=len(samples))
 
-    name = column_name.lower()
-
-    profile = np.zeros(
-        21,
-        dtype=np.float32
+    profile = ColumnProfile(
+        column_id=f"test.{column_name}",
+        raw_name=column_name,
+        normalized_tokens=column_name.lower().split("_"),
+        data_type=val_profile["dtype"],
+        sample_values=samples,
+        name_embedding=[],
+        value_profile=val_profile,
     )
-
-    # ID-like
-    if any(
-        word in name
-        for word in [
-            "id",
-            "no",
-            "number",
-            "code"
-        ]
-    ):
-
-        profile[0] = 1.0
-        profile[7] = 0.95
-        profile[10] = 1.0
-
-    # Date-like
-    elif any(
-        word in name
-        for word in [
-            "date",
-            "dt",
-            "dob",
-            "time"
-        ]
-    ):
-
-        profile[3] = 1.0
-        profile[7] = 0.8
-
-    # Status-like
-    elif any(
-        word in name
-        for word in [
-            "status",
-            "flag",
-            "indicator"
-        ]
-    ):
-
-        profile[2] = 1.0
-        profile[7] = 0.05
-
-    # Amount-like
-    elif any(
-        word in name
-        for word in [
-            "amount",
-            "amt",
-            "price",
-            "cost",
-            "total"
-        ]
-    ):
-
-        profile[1] = 1.0
-        profile[7] = 0.7
-
-    else:
-
-        profile[2] = 1.0
-        profile[7] = 0.4
-
-    return profile
-
-
-def cosine_similarity(a, b):
-
-    denominator = (
-        np.linalg.norm(a)
-        *
-        np.linalg.norm(b)
-    )
-
-    if denominator == 0:
-        return 0.0
-
-    return float(
-        np.dot(a, b) / denominator
-    )
-
-
-def create_mock_value_similarity_matrix(
-    source_cols,
-    target_cols
-):
-
-    source_profiles = {
-        col: create_mock_value_profile(col)
-        for col in source_cols
-    }
-
-    target_profiles = {
-        col: create_mock_value_profile(col)
-        for col in target_cols
-    }
-
-    matrix = np.zeros(
-        (len(source_cols), len(target_cols)),
-        dtype=np.float32
-    )
-
-    for i, source in enumerate(source_cols):
-
-        for j, target in enumerate(target_cols):
-
-            similarity = cosine_similarity(
-                source_profiles[source],
-                target_profiles[target]
-            )
-
-            matrix[i][j] = (
-                similarity
-            )
-
-    return matrix
-
-
-if __name__ == "__main__":
-
-    source = [
-        "customer_id",
-        "dob",
-        "amount"
-    ]
-
-    target = [
-        "cust_id",
-        "date_of_birth",
-        "total_amount"
-    ]
-
-    matrix = create_mock_value_similarity_matrix(
-        source,
-        target
-    )
-
-    print(matrix)
+    return profile.to_dict()
